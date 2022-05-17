@@ -1,1 +1,44 @@
+//Q1
+const sectionSelect = document.getElementById("container");
 
+//Q2
+const sectionQuerySelector = document.querySelector("#container");
+
+//Q3
+const listItems = document.querySelectorAll("li");
+for(let listItem of listItems){
+    listItem.setAttribute('class', 'second');
+}
+
+//Q4 Select a list item with a class of third, but only the list item inside of the ol tag.
+//const olThird = document.querySelectorAll('ol > .third');
+const olThird = document.querySelectorAll('.third:nth-of-type(2)');
+
+//Q5 Give the section with an id of container the text “Hello!”.
+sectionSelect.textContent += " Hello!"; 
+
+//Q6 Add the class main to the div with a class of footer.
+const divFooter = document.querySelector('.footer');
+divFooter.setAttribute('class', 'main');
+
+//Q7 Remove the class main on the div with a class of footer.
+divFooter.classList.toggle('main');
+divFooter.classList.toggle('footer');
+
+//Q8 Create a new li element.
+const newLi = document.createElement('li');
+
+//Q9 Give the li the text “four”.
+newLi.innerText = 'four';
+
+//Q10 Append the li to the ul element.
+const unorderList = document.querySelector('ul');
+unorderList.appendChild(newLi);
+
+//Q11 Loop over all of the lis inside the ol tag and give them a background color of “green”.
+const ols = document.querySelectorAll('ol li');
+for (let ol of ols) {
+    ol.sytle.backgroundColor = 'green';
+}
+//Q12 Remove the div with a class of footer
+divFooter.remove();
